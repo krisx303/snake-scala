@@ -1,7 +1,7 @@
 package com.akgroup.snake
 
 import objects.snake.{Head, Tail}
-import objects.{Apple, MovableMapObject, Rock}
+import objects.{Apple, MapObject, MovableMapObject, Rock}
 
 class WorldMap(val height: Int, val width: Int, private var objects: Map[(Int, Int), MapObject] = Map()) {
   def addObject(obj: MapObject): Boolean = {
@@ -48,22 +48,6 @@ class WorldMap(val height: Int, val width: Int, private var objects: Map[(Int, I
     objects.get(position)
   }
 
-  def printMap(): Unit = {
-    println("\n\n\n\n\n\n\n\n\n\n\n\n\n")
-    for (y <- height-1 to 0 by -1) {
-      for (x <- 0 until width) {
-        val obj: Option[MapObject] = objects.get((x, y))
-        if (obj.isEmpty) {
-          printf("⬜")
-        }
-        else {
-          printf(obj.get.render())
-        }
-      }
-      println("")
-    }
-  }
-
   def canMoveTo(obj: MovableMapObject, direction: Direction): Boolean = {
     val x: Int = obj.getX + direction.x
     val y: Int = obj.getY + direction.y
@@ -74,6 +58,8 @@ class WorldMap(val height: Int, val width: Int, private var objects: Map[(Int, I
       return true
     return !mapObject.get.isInstanceOf[Rock] && !mapObject.get.isInstanceOf[Tail]
   }
+
+  def getMapObjects: Map[(Int, Int), MapObject] = objects;
 }
 
 object WorldMap {

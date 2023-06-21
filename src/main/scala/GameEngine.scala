@@ -1,13 +1,14 @@
 package com.akgroup.snake
 
 import com.akgroup.snake.Direction.{EAST, NORTH, SOUTH, WEST}
-import com.akgroup.snake.objects.Apple
+import com.akgroup.snake.objects.{Apple, MapObject}
 import com.akgroup.snake.objects.snake.{Head, Tail}
+import com.akgroup.snake.ui.IUserInterface
 
 import java.awt.event.{KeyEvent, KeyListener}
 import java.time.LocalTime
 
-class GameEngine(private val worldMap: WorldMap) extends KeyListener {
+class GameEngine(private val worldMap: WorldMap, private val userInterface: IUserInterface) extends KeyListener {
 
   var head: Head = _
   var direction: Direction = NORTH;
@@ -26,15 +27,15 @@ class GameEngine(private val worldMap: WorldMap) extends KeyListener {
     var increase: Boolean = false;
     while (running) {
       increase = false;
-      worldMap.printMap()
+      userInterface.updateInterface(worldMap.getMapObjects)
       Thread.sleep(500)
-      if (direction != lastDirection.getOpposite) {
-        lastDirection = direction;
-      }else{
-        direction = lastDirection;
-      }
+      if (direction != lastDirection.getOpposite)
+        lastDirection = direction
+      else
+        direction = lastDirection
+
       if (!worldMap.canMoveTo(head, direction)) {
-        println("No i się skończyło")
+        userInterface.showGameOver()
         running = false;
         return;
       }
@@ -76,7 +77,7 @@ class GameEngine(private val worldMap: WorldMap) extends KeyListener {
 
 
 object GameEngine {
-  def apply(worldMap: WorldMap): GameEngine = {
-    return new GameEngine(worldMap)
+  def apply(worldMap: WorldMap, userInterface: IUserInterface): GameEngine = {
+    return new GameEngine(worldMap, userInterface)
   }
 }

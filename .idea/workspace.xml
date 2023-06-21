@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="235f111d-5232-497c-a209-62c156d9484a" name="Changes" comment="Changed objects positions from tuple to vector objects">
+    <list default="true" id="235f111d-5232-497c-a209-62c156d9484a" name="Changes" comment="Snake cannot move backwards">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/ui/ConsoleUserInterface.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/ui/IUserInterface.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/GameEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/GameEngine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/MapObject.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/objects/MapObject.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/WorldMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/WorldMap.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +69,7 @@
       <module name="snake-scala" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.akgroup.snake.*" />
+          <option name="PATTERN" value="com.akgroup.snake.objects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,7 +82,7 @@
       <module name="snake-scala" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.akgroup.snake.*" />
+          <option name="PATTERN" value="com.akgroup.snake.objects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687375468635</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Snake cannot move backwards">
+      <created>1687376172969</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687376172969</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +172,7 @@
     <MESSAGE value="Basic classes" />
     <MESSAGE value="Everything changed" />
     <MESSAGE value="Changed objects positions from tuple to vector objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed objects positions from tuple to vector objects" />
+    <MESSAGE value="Snake cannot move backwards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Snake cannot move backwards" />
   </component>
 </project>
