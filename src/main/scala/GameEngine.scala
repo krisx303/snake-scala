@@ -28,6 +28,11 @@ class GameEngine(private val worldMap: WorldMap) extends KeyListener {
       increase = false;
       worldMap.printMap()
       Thread.sleep(500)
+      if (direction != lastDirection.getOpposite) {
+        lastDirection = direction;
+      }else{
+        direction = lastDirection;
+      }
       if (!worldMap.canMoveTo(head, direction)) {
         println("No i się skończyło")
         running = false;
@@ -38,17 +43,16 @@ class GameEngine(private val worldMap: WorldMap) extends KeyListener {
         println("Jabłko")
         increase = true;
       }
-      if(direction != lastDirection.getOpposite)
-        worldMap.moveTo(head, direction, increase)
 
       if (increase) {
         worldMap.createNewApple(generateNewPosition _)
       }
+      worldMap.moveTo(head, direction, increase)
     }
   }
 
   def generateNewPosition(): Position = {
-    return Position(LocalTime.now().getNano % 14, LocalTime.now().getNano % 14)
+    Position(LocalTime.now().getNano % 14, LocalTime.now().getNano % 14)
   }
 
 
