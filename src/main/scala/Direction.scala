@@ -1,9 +1,20 @@
 package com.akgroup.snake
 
+import Direction.{EAST, NORTH, SOUTH, WEST}
+
 
 sealed trait Direction {
   val x: Int
   val y: Int
+
+  def getOpposite: Direction = {
+    this match {
+      case NORTH => SOUTH;
+      case EAST => WEST;
+      case SOUTH => NORTH;
+      case WEST => EAST;
+    }
+  }
 }
 
 object Direction {
