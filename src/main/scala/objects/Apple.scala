@@ -1,6 +1,8 @@
 package com.akgroup.snake
 package objects
 
-class Apple(var x: Int, var y: Int) extends MapObject(x, y) {
-
+class Apple(private val posx: Int, private val posy: Int) extends MapObject(posx, posy) {
+  override def render(): String = {
+    "🍎"
+  }
 }

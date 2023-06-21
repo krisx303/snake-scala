@@ -3,6 +3,11 @@ package objects.snake
 
 import objects.MovableMapObject
 
-class Tail(var x: Int, var y: Int) extends MovableMapObject(x, y) {
+class Tail(private val posx: Int, private val posy: Int, var nextTail: Tail) extends MovableMapObject(posx, posy) {
+  override def render(): String = {"🟩"}
 
+  def move(position: (Int, Int)): Unit = {
+    x = position._1
+    y = position._2
+  }
 }
