@@ -36,13 +36,13 @@ class GameEngine(private val worldMap: WorldMap, private val userInterface: IUse
 
       if (!worldMap.canMoveTo(head, direction)) {
         userInterface.showGameOver()
-        running = false;
-        return;
+        running = false
+        return
       }
       val obj: Option[MapObject] = worldMap.getObjectAtPosition((head.getPosition + direction).intoTuple)
       if (obj.isDefined && obj.get.isInstanceOf[Apple]) {
         println("Jabłko")
-        increase = true;
+        increase = true
       }
 
       if (increase) {

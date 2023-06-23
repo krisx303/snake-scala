@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="235f111d-5232-497c-a209-62c156d9484a" name="Changes" comment="Snake cannot move backwards">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/ui/ConsoleUserInterface.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/ui/IUserInterface.scala" afterDir="false" />
+    <list default="true" id="235f111d-5232-497c-a209-62c156d9484a" name="Changes" comment="Console User Interface">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/ui/GraphicalUserInterface.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/GameEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/GameEngine.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/MapObject.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/objects/MapObject.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/WorldMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/WorldMap.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="GridWindowExample" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.akgroup.snake.ui.GridWindowExample" />
+      <module name="snake-scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akgroup.snake.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KeyListenerExample" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.akgroup.snake.KeyListenerExample" />
       <module name="snake-scala" />
@@ -90,9 +101,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SnakeFx" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.akgroup.snake.ui.SnakeFx" />
+      <module name="snake-scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akgroup.snake.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SnakeWindow" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.akgroup.snake.ui.SnakeWindow" />
+      <module name="snake-scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akgroup.snake.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SnakeWindow" />
+        <item itemvalue="Application.GridWindowExample" />
+        <item itemvalue="Application.SnakeFx" />
         <item itemvalue="Application.KeyListenerExample" />
       </list>
     </recent_temporary>
@@ -141,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687376172969</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Console User Interface">
+      <created>1687377164065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687377164065</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +220,7 @@
     <MESSAGE value="Everything changed" />
     <MESSAGE value="Changed objects positions from tuple to vector objects" />
     <MESSAGE value="Snake cannot move backwards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Snake cannot move backwards" />
+    <MESSAGE value="Console User Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Console User Interface" />
   </component>
 </project>
